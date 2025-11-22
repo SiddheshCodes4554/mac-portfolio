@@ -2,6 +2,12 @@
 
 @import "tailwindcss";
 
+.variable-font {
+  font-variation-settings: "wght" var(--wght);
+  transition: font-variation-settings 0.1s ease-out;
+}
+
+
 html,
 body {
   width: 100dvw;
