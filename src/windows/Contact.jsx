@@ -12,7 +12,7 @@ const Contact = (props) => {
                 <h2>Contact Me</h2>
             </div>
 
-            <div className={clsx('p-5 space-y-5', props.isMobile ? 'flex flex-col items-center text-center' : '')}>
+            <div className={clsx('p-5 space-y-5 h-full overflow-y-auto w-full', props.isMobile ? 'flex flex-col items-center text-center pt-16 pb-20' : '')}>
                 <img
                     src="/images/adrian.jpg"
                     alt='Adrian'
@@ -24,7 +24,7 @@ const Contact = (props) => {
                     i'm in.</p>
                 <p className="break-all">siddheshgawade4554@gmail.com</p>
 
-                <ul className={props.isMobile ? 'justify-center' : ''}>
+                <ul className={clsx(props.isMobile ? 'justify-center flex-wrap gap-4' : '')}>
                     {socials.map(({ id, bg, link, icon, text }) => (
                         <li key={id} style={{ backgroundColor: bg }}>
                             <a

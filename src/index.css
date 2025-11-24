@@ -13,11 +13,19 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper.png");
+  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/5658.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/* @media screen and (min-width: 400px) {
+
+  html,
+  body {
+    background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/24060.jpg");
+  }
+} */
 
 @theme {
   --font-georama: "Georama", sans-serif;
