@@ -3,7 +3,7 @@ import { WindowControls } from '#components'
 import WindowWrapper from '#hoc/WindowWrapper'
 import useWindowStore from '#constants/store/window'
 
-const Image = () => {
+const Image = (props) => {
     const { windows } = useWindowStore();
     const data = windows.imgfile.data;
 
@@ -12,7 +12,7 @@ const Image = () => {
     return (
         <div className="w-full h-full bg-white flex flex-col">
             <div id="window-header" className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-gray-50">
-                <WindowControls target="imgfile" />
+                {!props.isMobile && <WindowControls target="imgfile" />}
                 <span className="text-sm font-medium text-gray-700">{data.name}</span>
                 <div className="w-14"></div> {/* Spacer for centering */}
             </div>
