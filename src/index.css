@@ -13,7 +13,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/5658.jpg");
+  background-image: url("https://applescoop.org/image/wallpapers/mac/apple-m3-macbook-pro-default-modified-11-10-2024-1728714492-hd-wallpaper.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -51,7 +51,7 @@ body {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply flex justify-between items-center bg-white/60 backdrop-blur-3xl p-2 px-5 select-none;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;

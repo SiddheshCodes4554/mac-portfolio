@@ -4,9 +4,14 @@ import { WindowControls } from "#components/index.js";
 import { gallery, photosLinks } from '#constants/index.js';
 import useWindowStore from "#constants/store/window";
 import clsx from 'clsx';
+import IOSPhotoGrid from "#components/ios/IOSPhotoGrid";
 
 const Photos = (props) => {
     const { openWindow } = useWindowStore();
+
+    if (props.isMobile) {
+        return <IOSPhotoGrid />;
+    }
 
     return (
         <div className="w-full h-full flex flex-col bg-white">

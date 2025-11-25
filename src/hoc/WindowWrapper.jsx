@@ -12,6 +12,7 @@ const WindowWrapper = (Component, windowKey) => {
         const { focusWindow, windows } = useWindowStore();
         const { isOpen, zIndex, isMinimized, isMaximized } = windows[windowKey];
         const ref = useRef(null);
+        const isMounted = useRef(false);
 
         useGSAP(() => {
             const el = ref.current;
@@ -28,8 +29,13 @@ const WindowWrapper = (Component, windowKey) => {
                 );
             } else if (!isOpen) {
                 // Close Animation
-                // Only animate if it's currently visible (to avoid animating on initial render if closed)
-                if (el.style.display !== 'none') {
+                // Prevent flash on load: if not mounted yet, hide immediately without animation
+                if (!isMounted.current) {
+                    el.style.display = 'none';
+                    el.style.opacity = 0;
+                    el.style.transform = 'scale(0.8)';
+                } else if (el.style.display !== 'none') {
+                    // Only animate if it's currently visible
                     gsap.to(el, {
                         scale: 0.8,
                         opacity: 0,
@@ -45,6 +51,10 @@ const WindowWrapper = (Component, windowKey) => {
             } else if (isMinimized) {
                 // Minimize logic (immediate hide for now, or could animate)
                 el.style.display = 'none';
+            }
+
+            if (!isMounted.current) {
+                isMounted.current = true;
             }
 
         }, [isOpen, isMinimized]);
