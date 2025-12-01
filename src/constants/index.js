@@ -177,7 +177,11 @@ const gallery = [
   },
   {
     id: 4,
-    img: "/images/Gallery3.jpg",
+    img: "/images/Gallery4.jpg",
+  },
+  {
+    id: 5,
+    img: "/images/Gallery5.jpg",
   },
 ];
 
@@ -371,7 +375,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/Profile_website.jpg",
     },
     {
       id: 2,
@@ -380,16 +384,16 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/Gallery1.jpg",
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "Google-Agentic-Ai-Hackathon.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/Gallery5.jpg",
     },
     {
       id: 4,
@@ -399,12 +403,10 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/Small-Profile.jpg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Hey! I’m Siddhesh 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+        "I’m a tech enthusiast with hands-on experience in full-stack development, AI, and robotics/IoT. I enjoy turning ideas into functional projects and constantly expanding my skillset. I aim to create impactful solutions that blend innovation with practicality.",
       ],
     },
   ],
